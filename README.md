@@ -8,14 +8,19 @@ Adds the plugin to your `book.json`, then run `gitbook install` if you are build
 
 ```js
 {
-  "plugins": [ "melchior" ]
+  "plugins": [ "melchior@1.1.0" ],
+  "pluginsConfig": {
+    "melchior": {
+      "includes": "_includes"
+    } 
+  }
 }
 ```
 
 ## Usage
 Three ways to use the plugin. Usage depends on how much you want to configure the order of languages / label, and if you're using GitBook or not.
 
-- create a directory in the root of your book directory called `_includes`
+- create a folder for your includes that matches the folder in your plugins config (default: `_includes`)
 - put your includes somewhere in that folder
 - provide a name for your include, in any number of languages
 - pipe the name through `melchior`, and voila!

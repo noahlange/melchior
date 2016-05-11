@@ -1,7 +1,7 @@
 {
   "name": "gitbook-plugin-melchior",
   "description": "Multi-language code includes for Gitbook.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "Apache-2.0",
   "repository": {
@@ -21,6 +21,15 @@
     "lang-map": "^0.4.0"
   },
   "engines": {
-    "gitbook": ">3.x.x"
+    "gitbook": "^3.x.x"
+  },
+  "gitbook": {
+    "properties": {
+      "includes": {
+        "type": "string",
+        "default": "_includes",
+        "description": "Root directory for file includes."
+      }
+    }
   }
 }

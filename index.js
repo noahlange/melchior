@@ -8,7 +8,8 @@ module.exports = {
   },
   filters: {
     melchior(includeFile, ...languages) {
-      return melchior(`${ this.book.root }/_includes`)(includeFile, ...languages);
+      const path = this.config.get('pluginsConfig.melchior.includes');
+      return melchior(this.resolve(path))(includeFile, ...languages);
     }
   },
   melchior
