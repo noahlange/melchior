@@ -1,11 +1,12 @@
 {
   "name": "gitbook-plugin-melchior",
   "description": "Multi-language code includes for Gitbook.",
+  "version": "1.0.0",
+  "main": "index.js",
   "dependencies": {
     "escape-html": "^1.0.3",
     "lang-map": "^0.4.0"
   },
-  "main": "index.js",
   "engines": {
     "gitbook": ">1.x.x"
   },

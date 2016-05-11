@@ -50,7 +50,7 @@ This is a code block with tabs for each language:
 ### Wild-West Mode
 If you don't want to use Gitbook, an off-label use of this module includes its use (specifically, use of the `melchior` export of `index.js`) as a perfectly normal function, passing in the base directory for your includes.
 
-When used as a standalone function, I happen to prefer an array for the second arg, so that's also an option. Either way you'll get the same output.
+When used as a standalone function, I happen to prefer an array for the second arg, so that's also an option. Either way you'll get the same output. You can also just not pass anything after the include name and it'll continue to work in Lazy Mode.
 
 ```javascript
 const gpm = require('gitbook-plugin-melchior');
@@ -59,11 +59,13 @@ const melchior = gpm.melchior(__dirname);
 
 const str1 = `{{ melchior('hello/world', 'Python', 'JavaScript') }}`;
 const str2 = `{{ melchior('hello/world', [ 'Python', 'JavaScript' ]) }}`;
+const str3 = `{{ melchior('hello/world') }}`;
 
 const res1 = render(str1, { melchior });
 const res2 = render(str2, { melchior });
+const res3 = render(str3, { melchior });
 
-console.log(res1 === res2); // true
+console.log(res1 === res2); // true, but no such guarantee for res3.
 ```
 
 ## Issues
