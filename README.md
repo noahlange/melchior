@@ -74,4 +74,4 @@ console.log(res1 === res2); // true, but no such guarantee for res3.
 - uses fancy ES6 features, won't work in &lt;6.x versions of Node. May provide a transpiled version if this turns out to be an issue.
 
 ## License
-MIT, baby.
+Apache 2.0.
